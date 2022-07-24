@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 612415191252699378}
   m_Layer: 0
   m_Name: Down
-  m_TagString: Untagged
+  m_TagString: Yandin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -26,7 +26,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3541329220648178149}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.5, z: 0}
+  m_LocalPosition: {x: 0, y: -4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -123,7 +123,7 @@ GameObject:
   - component: {fileID: 4015336856468839148}
   m_Layer: 0
   m_Name: Scoring
-  m_TagString: Untagged
+  m_TagString: Skor
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -182,7 +182,7 @@ GameObject:
   - component: {fileID: 9113963947092331118}
   m_Layer: 0
   m_Name: Top
-  m_TagString: Untagged
+  m_TagString: Yandin
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

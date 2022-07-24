@@ -5,7 +5,7 @@ public class Player : MonoBehaviour
 {
     private SpriteRenderer spriteRenderer;
     private Vector3 direction;
-    public float gravity = -9.8f;
+    public float gravity = -15f;
     public float strenght = 5f;
     public Sprite[] sprites;
     private int spriteIndex;
@@ -53,5 +53,22 @@ public class Player : MonoBehaviour
         }
 
         spriteRenderer.sprite = sprites[spriteIndex];
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Yandin")
+        {
+            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
+            GetComponent<Rigidbody2D>().gravityScale = 5f;
+            GetComponent<Player>().enabled = false;
+            FindObjectOfType<GameManager>().GameOver();
+        }
+
+        if (other.gameObject.tag == "Skor")
+        {
+            FindObjectOfType<GameManager>().SkoruArttir();
+
+        }
     }
 }
