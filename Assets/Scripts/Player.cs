@@ -1,5 +1,6 @@
 
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
@@ -22,7 +23,9 @@ public class Player : MonoBehaviour
 
     private void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
         {
             direction = Vector3.up * strenght;
         }
@@ -59,13 +62,12 @@ public class Player : MonoBehaviour
     {
         if (other.gameObject.tag == "Yandin")
         {
-            GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Dynamic;
-            GetComponent<Rigidbody2D>().gravityScale = 5f;
-            GetComponent<Player>().enabled = false;
+            
             FindObjectOfType<GameManager>().GameOver();
+            
         }
 
-        if (other.gameObject.tag == "Skor")
+        else if (other.gameObject.tag == "Skor")
         {
             FindObjectOfType<GameManager>().SkoruArttir();
 
